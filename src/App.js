@@ -6,7 +6,7 @@ import AccountOperations from "./features/accounts/AccountOperations";
 import BalanceDisplay from "./features/accounts/BalanceDisplay";
 
 function App() {
-  const customer = useSelector(store => store.customer.fullName);
+  const customer = useSelector(({ customer: { fullName } }) => fullName);
 
   return (
     <div>
